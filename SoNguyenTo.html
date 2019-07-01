@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoNguyenTo</title>
+</head>
+<body>
+<script>
+    function primeFactorsTo(max)
+    {
+        let store  = [], i, j, primes = [];
+        for (i = 2; i <= max; i++)
+        {
+            if (!store [i])
+            {
+                primes.push(i);
+                for (j = i < 1; j <= max; j += i)
+                {
+                    store[j] = true;
+                }
+            }
+        }
+        return primes;
+    }
+    let num = Number(prompt("Enter a number"));
+    console.log(primeFactorsTo(num));
+
+</script>
+</body>
+</html>
